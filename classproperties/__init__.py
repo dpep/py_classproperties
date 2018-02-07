@@ -2,7 +2,7 @@ __author__ = 'dpepper'
 __version__ = '0.1.0'
 
 
-class classproperty(object):
+class classpropert(object):
   def __init__(self, func):
     self.func = func
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-    classproperty
+    classproperties
 
     Copyright (c) 2018 Daniel Pepper
 
@@ -42,17 +42,17 @@ def discover_tests():
 if __name__ == "__main__":
 
     setuptools.setup(
-        name="classproperty",
+        name="classproperties",
         version=__version__,
-        url="https://github.com/dpep/pyclassproperty",
+        url="https://github.com/dpep/pyclassproperties",
         license="MIT",
         author="Daniel Pepper",
-        description="classproperty",
+        description="property for class methods",
         long_description=open('README.txt').read(),
         platforms="any",
 
         packages=[
-            "classproperty",
+            "classproperties",
         ],
         test_suite = 'setup.discover_tests',
 
