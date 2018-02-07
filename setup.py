@@ -26,7 +26,7 @@
 """
 
 __author__ = 'dpepper'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 import setuptools
 import unittest
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         license="MIT",
         author="Daniel Pepper",
         description="property for class methods",
-        long_description=open('README.txt').read(),
+        long_description=open('README.md').read(),
         platforms="any",
 
         packages=[
