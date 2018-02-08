@@ -6,10 +6,10 @@ class classproperty(object):
   def __init__(self, func):
     self.func = func
 
-  def __get__(self, obj, owner):
+  def __get__(self, obj, objtype):
     args = []
 
     if self.func.func_code.co_argcount > 0:
-      args.append(owner)
+      args.append(objtype)
 
     return self.func(*args)
