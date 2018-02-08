@@ -5,11 +5,39 @@ import sys
 import unittest
 
 sys.path = [ os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')) ] + sys.path
+
 from classproperties import classproperty
 
 
 class ArrayTest(unittest.TestCase):
-    def test_basic(self):
+    def test_classproperty(self):
+        class Bar:
+            @classproperty
+            def p(cls):
+                return 'p'
+
+            @classproperty
+            def q():
+                return 'q'
+
+
+        self.assertEquals(
+            Bar.p,
+            'p'
+        )
+
+        self.assertEquals(
+            Bar().p,
+            'p'
+        )
+
+        self.assertEquals(
+            Bar.q,
+            'q'
+        )
+
+
+    def test_standard(self):
         class Foo:
             a = 'a'
 
@@ -23,10 +51,6 @@ class ArrayTest(unittest.TestCase):
 
             def d(self):
                 return 'd'
-
-            @classproperty
-            def p(cls):
-                return 'p'
 
 
         self.assertEquals(
@@ -47,16 +71,6 @@ class ArrayTest(unittest.TestCase):
         self.assertEquals(
             Foo().d(),
             'd'
-        )
-
-        self.assertEquals(
-            Foo.p,
-            'p'
-        )
-
-        self.assertEquals(
-            Foo().p,
-            'p'
         )
 
 
