@@ -1,3 +1,11 @@
+v0.2.0, 2019-01-24
+    1983d99 Merge pull request #1 from steinnes/py3-support
+    b236a80 Get rid of deprecation warning
+    656285d Adding tox to run tests on other python versions
+    bce5de8 Use func.__code__ if python version != 2
+    16437c0 cleanup
+    4d9339e more test coverage and separate tests
+    ff1cc3c better naming
 v0.1.2, 2018-02-07
     8bfa38d add readme
 v0.1.1, 2018-02-07
@@ -5,4 +13,4 @@ v0.1.1, 2018-02-07
 v0.1.0, 2018-02-07
     fdf699a rename
 v0.1.0, 2018-02-07
-    
+
