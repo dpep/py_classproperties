@@ -21,17 +21,17 @@ class ArrayTest(unittest.TestCase):
                 return 'q'
 
 
-        self.assertEquals(
+        self.assertEqual(
             Bar.p,
             'p'
         )
 
-        self.assertEquals(
+        self.assertEqual(
             Bar().p,
             'p'
         )
 
-        self.assertEquals(
+        self.assertEqual(
             Bar.q,
             'q'
         )
@@ -53,22 +53,22 @@ class ArrayTest(unittest.TestCase):
                 return 'd'
 
 
-        self.assertEquals(
+        self.assertEqual(
             Foo.a,
             'a'
         )
 
-        self.assertEquals(
+        self.assertEqual(
             Foo.b(),
             'b'
         )
 
-        self.assertEquals(
+        self.assertEqual(
             Foo.c(),
             'c'
         )
 
-        self.assertEquals(
+        self.assertEqual(
             Foo().d(),
             'd'
         )

@@ -1,6 +1,8 @@
 __author__ = 'dpepper'
 __version__ = '0.1.3'
 
+import sys
+
 
 class classproperty(object):
   def __init__(self, func):
@@ -9,7 +11,12 @@ class classproperty(object):
   def __get__(self, obj, objtype):
     args = []
 
-    if self.func.func_code.co_argcount > 0:
+    if sys.version_info[0] == 2:
+      code = self.func.func_code
+    else:
+      code = self.func.__code__
+
+    if code.co_argcount > 0:
       args.append(objtype)
 
     return self.func(*args)
